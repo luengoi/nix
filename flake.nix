@@ -11,15 +11,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # Manage homebrew installation
-    nix-homebrew.url = "github:zhaofengli/nix-homebrew";
-
-    # Homebrew taps
-    xcodesorg = {
-      url = "github:xcodesorg/homebrew-made";
-      flake = false;
-    };
-
     # Home manager
     home-manager = {
       url = "github:nix-community/home-manager";

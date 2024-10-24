@@ -7,20 +7,6 @@ darwin.lib.darwinSystem {
     { nixpkgs.overlays = with inputs; [ nur.overlay ]; }
     target.host.config
 
-    inputs.nix-homebrew.darwinModules.nix-homebrew
-    {
-      nix-homebrew = {
-        # Install homebrew under the default prefix
-        enable = true;
-        user = target.user.name;
-
-        # Homebrew taps
-        taps = {
-          "xcodesorg/made" = inputs.xcodesorg;
-        };
-      };
-    }
-
     inputs.home-manager.darwinModules.home-manager
     {
       users.users."${target.user.name}".home = target.user.home;

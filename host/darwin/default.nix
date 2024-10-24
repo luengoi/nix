@@ -137,6 +137,10 @@
   homebrew = {
     enable = true;
 
+    taps = [
+      "xcodesorg/made"
+    ];
+
     brews = [
       "xcodesorg/made/xcodes"
     ];
