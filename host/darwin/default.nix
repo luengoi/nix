@@ -146,7 +146,6 @@
     ];
 
     casks = [
-      "firefox"
       "kitty"
     ];
 

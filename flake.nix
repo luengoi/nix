@@ -19,6 +19,9 @@
 
     # Nix User Repository
     nur.url = "github:nix-community/nur";
+
+    # Firefox overlay for macOS
+    firefox-darwin.url = "github:luengoi/nix-firefox-darwin";
   };
 
   outputs = inputs @ { self, darwin, ... }:

@@ -20,6 +20,24 @@
         "type": "github"
       }
     },
+    "firefox-darwin": {
+      "inputs": {
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "lastModified": 1729793624,
+        "narHash": "sha256-v3TmOKJ3ASXRkrppEKja1wWQHpqrY6wHmY6h4TJfwTw=",
+        "owner": "luengoi",
+        "repo": "nix-firefox-darwin",
+        "rev": "dac55a051f008117d13569ba4a93978ecceb6c2d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "luengoi",
+        "repo": "nix-firefox-darwin",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -41,6 +59,22 @@
       }
     },
     "nixpkgs": {
+      "locked": {
+        "lastModified": 1729722069,
+        "narHash": "sha256-gY9Wc8ZhBsPdQqWnTV+XuNaj2dbQW0uslAaJHamczSE=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "6301495959cf1737c6ebcd153833e4c4596f56e2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixpkgs-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
       "locked": {
         "lastModified": 1729658218,
         "narHash": "sha256-9Rg+AqLqvqqJniP/OQB3GtgXoAd8IlazsHp97va042Y=",
@@ -74,8 +108,9 @@
     "root": {
       "inputs": {
         "darwin": "darwin",
+        "firefox-darwin": "firefox-darwin",
         "home-manager": "home-manager",
-        "nixpkgs": "nixpkgs",
+        "nixpkgs": "nixpkgs_2",
         "nur": "nur"
       }
     }

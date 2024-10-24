@@ -2,12 +2,11 @@
 
 {
   programs.firefox = {
-    enable = false;
+    enable = true;
+    package = pkgs.firefox-bin;
 
     profiles.default = {
       id = 0;
-      name = "default";
-      isDefault = true;
 
       search = {
         force = true;
