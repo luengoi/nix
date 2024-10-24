@@ -23,6 +23,17 @@
       TERM = "xterm-256color";
     };
 
+    shellAliases = {
+      ls = "lsd --color=auto --group-dirs=first";
+      ll = "ls -lh";
+      la = "ls -lAh";
+      lsa = "ls -lah";
+      "..." = "../..";
+      "...." = "../../..";
+      "....." = "../../../..";
+      "......" = "../../../../..";
+    };
+
     initExtraFirst = ''
       if [[ -r "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh" ]]; then
         source "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh"
