@@ -1,10 +1,10 @@
-{ pkgs, ... }:
+{ ... }:
 
 {
   programs.kitty = {
     enable = true;
     shellIntegration.enableZshIntegration = true;
-    
+
     settings = {
       # Fonts
       font_family = "MesloLGS NF";

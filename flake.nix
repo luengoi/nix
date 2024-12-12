@@ -24,25 +24,26 @@
     firefox-darwin.url = "github:luengoi/nix-firefox-darwin";
   };
 
-  outputs = inputs @ { self, darwin, ... }:
-  let
-    mkDarwinConfiguration = import ./lib/mkDarwinConfiguration.nix;
-  in
-  {
-    darwinConfigurations = {
-      starship = mkDarwinConfiguration {
-        inherit darwin inputs;
+  outputs =
+    inputs@{ darwin, ... }:
+    let
+      mkDarwinConfiguration = import ./lib/mkDarwinConfiguration.nix;
+    in
+    {
+      darwinConfigurations = {
+        starship = mkDarwinConfiguration {
+          inherit darwin inputs;
 
-        target = {
-          host.system = "aarch64-darwin";
-          host.config = ./host/starship.nix;
-          host.stateVersion = 5;
-          user.name = "iluengo";
-          user.home = "/Users/iluengo";
-          home.config = "starship.nix";
-          home.stateVersion = "24.11";
+          target = {
+            host.system = "aarch64-darwin";
+            host.config = ./host/starship.nix;
+            host.stateVersion = 5;
+            user.name = "iluengo";
+            user.home = "/Users/iluengo";
+            home.config = "starship.nix";
+            home.stateVersion = "24.11";
+          };
         };
       };
     };
-  };
 }

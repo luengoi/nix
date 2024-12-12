@@ -1,4 +1,9 @@
-{ pkgs, config, lib, ... }:
+{
+  pkgs,
+  config,
+  lib,
+  ...
+}:
 
 {
   programs.zsh = {
@@ -16,7 +21,12 @@
       ignoreDups = true;
       ignoreSpace = true;
       expireDuplicatesFirst = false;
-      ignorePatterns = [ "l" "la" "ll" "clear" ];
+      ignorePatterns = [
+        "l"
+        "la"
+        "ll"
+        "clear"
+      ];
     };
 
     sessionVariables = {

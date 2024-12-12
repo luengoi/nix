@@ -1,10 +1,20 @@
-{ darwin, inputs, target, ... }:
+{
+  darwin,
+  inputs,
+  target,
+  ...
+}:
 
 darwin.lib.darwinSystem {
   system = target.host.system;
   specialArgs = { inherit inputs target; };
   modules = [
-    { nixpkgs.overlays = with inputs; [ nur.overlay firefox-darwin.overlay ]; }
+    {
+      nixpkgs.overlays = with inputs; [
+        nur.overlays.default
+        firefox-darwin.overlay
+      ];
+    }
     target.host.config
 
     inputs.home-manager.darwinModules.home-manager
@@ -13,6 +23,7 @@ darwin.lib.darwinSystem {
       home-manager = {
         useGlobalPkgs = true;
         useUserPackages = true;
+        backupFileExtension = "backup";
         extraSpecialArgs = { inherit target; };
         users."${target.user.name}" = import ../home/${target.home.config};
       };

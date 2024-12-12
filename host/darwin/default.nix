@@ -8,14 +8,16 @@
     package = pkgs.nix;
 
     settings = {
-      experimental-features = [ "nix-command" "flakes" ];
+      experimental-features = [
+        "nix-command"
+        "flakes"
+      ];
       trusted-users = [ "@admin" ];
     };
   };
 
   environment = {
     shells = with pkgs; [ zsh ];
-    loginShell = pkgs.zsh;
     pathsToLink = [ "/share/zsh" ];
   };
 
@@ -125,12 +127,8 @@
       material-design-icons
 
       # Nerdfonts
-      (nerdfonts.override {
-        fonts = [
-          "NerdFontsSymbolsOnly"
-          "Hack"
-        ];
-      })
+      nerd-fonts.symbols-only
+      nerd-fonts.hack
     ];
   };
 
