@@ -16,6 +16,7 @@
         # ---------------------------------------------------------------------
 
         ${builtins.readFile ./programs/zsh/integrations/fzf.zsh}
+        ${builtins.readFile ./programs/zsh/integrations/nix.zsh}
       '';
     };
   };

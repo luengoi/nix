@@ -25,9 +25,22 @@
   };
 
   outputs =
-    inputs@{ darwin, ... }:
+    inputs@{
+      darwin,
+      nixpkgs,
+      ...
+    }:
     let
       mkDarwinConfiguration = import ./lib/mkDarwinConfiguration.nix;
+      supportedPlatforms = [ "aarch64-darwin" ];
+      forEachPlatform =
+        f:
+        nixpkgs.lib.genAttrs supportedPlatforms (
+          system:
+          f {
+            pkgs = import nixpkgs { inherit system; };
+          }
+        );
     in
     {
       darwinConfigurations = {
@@ -45,5 +58,19 @@
           };
         };
       };
+
+      devShells = forEachPlatform (
+        { pkgs }:
+        {
+          react-native = pkgs.mkShell {
+            packages = with pkgs; [
+              bundler
+              nodejs_23
+              ruby
+              watchman
+            ];
+          };
+        }
+      );
     };
 }
