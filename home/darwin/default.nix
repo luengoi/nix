@@ -36,6 +36,7 @@
       gh
       git
       lsd
+      mise
       ncurses
       neovim
       nodejs_22
