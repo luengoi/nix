@@ -1,4 +1,9 @@
-{ pkgs, lib, target, ... }:
+{
+  pkgs,
+  lib,
+  target,
+  ...
+}:
 
 {
   imports = [
@@ -39,6 +44,8 @@
       mise
       ncurses
       neovim
+      nixd
+      nixfmt-rfc-style
       nodejs_22
       openssh
       python3
