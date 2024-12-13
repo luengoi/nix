@@ -69,6 +69,10 @@
               ruby
               watchman
             ];
+
+            shellHook = ''
+              export DEVELOPER_DIR="/Applications/Xcode-16.2.0.app/Contents/Developer/"
+            '';
           };
         }
       );
