@@ -14,6 +14,9 @@ darwin.lib.darwinSystem {
         nur.overlays.default
         firefox-darwin.overlay
       ];
+      nixpkgs.config = {
+        allowUnfree = true;
+      };
     }
     target.host.config
 

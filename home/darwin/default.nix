@@ -36,6 +36,7 @@
       cargo
       coreutils
       curl
+      discord
       fd
       fzf
       gh
