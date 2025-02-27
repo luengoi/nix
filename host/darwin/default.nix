@@ -1,10 +1,8 @@
 { pkgs, target, ... }:
 
 {
-  # Auto upgrade nix package and daemon service
-  services.nix-daemon.enable = true;
-
   nix = {
+    enable = true;
     package = pkgs.nix;
 
     settings = {
