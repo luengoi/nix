@@ -45,6 +45,8 @@
           NSAutomaticQuoteSubstitutionEnabled = false;
           # Disable auto-correct
           NSAutomaticSpellingCorrectionEnabled = false;
+          # Enable window dragging by holding it anywhere.
+          NSWindowShouldDragOnGesture = true;
           # Disable press-and-hold in favor of key repeat
           ApplePressAndHoldEnabled = false;
           # Faster keyboard repeat rate
@@ -146,7 +148,6 @@
     ];
 
     onActivation = {
-      cleanup = "zap";
       autoUpdate = true;
       upgrade = true;
     };
