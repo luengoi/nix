@@ -141,6 +141,30 @@
         "datareporting.healthreport.uploadEnabled" = false;
       };
 
+      containersForce = true;
+      containers = {
+        Personal = {
+          color = "blue";
+          icon = "fingerprint";
+          id = 0;
+        };
+        Work = {
+          color = "orange";
+          icon = "briefcase";
+          id = 1;
+        };
+        Shopping = {
+          color = "pink";
+          icon = "cart";
+          id = 2;
+        };
+        Research = {
+          color = "turquoise";
+          icon = "chill";
+          id = 3;
+        };
+      };
+
       extensions.packages = with pkgs.nur.repos.rycee.firefox-addons; [
         ublock-origin
         darkreader
