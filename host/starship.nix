@@ -14,5 +14,6 @@
   homebrew.casks = [
     "proton-pass"
     "protonmail-bridge"
+    "zen-browser"
   ];
 }
