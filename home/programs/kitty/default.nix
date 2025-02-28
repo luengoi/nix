@@ -21,6 +21,7 @@
       window_padding_width = 0;
       background_opacity = 1;
       shell = "zsh --login";
+      hide_window_decorations = "titlebar-only";
     };
 
     extraConfig = ''
