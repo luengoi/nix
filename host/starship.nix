@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ ... }:
 
 {
   imports = [
@@ -7,7 +7,7 @@
 
   system.defaults.dock.persistent-apps = [
     "/Applications/Kitty.app"
-    "${pkgs.firefox-bin}/Applications/Firefox.app"
+    "/Applications/Zen.app"
     "/System/Applications/Mail.app"
   ];
 
