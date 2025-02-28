@@ -54,6 +54,55 @@
             icon = "''${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
             definedAliases = [ "@np" ];
           };
+          "GitHub" = {
+            urls = [
+              {
+                template = "https://github.com/search";
+                params = [
+                  {
+                    name = "q";
+                    value = "{searchTerms}";
+                  }
+                ];
+              }
+            ];
+            icon = "https://github.com/favicon.ico";
+            definedAliases = [ "@gh" ];
+          };
+          "YouTube" = {
+            urls = [
+              {
+                template = "https://www.youtube.com/results";
+                params = [
+                  {
+                    name = "search_query";
+                    value = "{searchTerms}";
+                  }
+                ];
+              }
+            ];
+            icon = "https://www.youtube.com/favicon.ico";
+            definedAliases = [ "@yt" ];
+          };
+          "Google Images" = {
+            urls = [
+              {
+                template = "https://www.google.com/search";
+                params = [
+                  {
+                    name = "q";
+                    value = "{searchTerms}";
+                  }
+                  {
+                    name = "udm";
+                    value = "2";
+                  }
+                ];
+              }
+            ];
+            icon = "https://www.google.com/favicon.ico";
+            definedAliases = [ "@yt" ];
+          };
           "Bing".metaData.hidden = true;
           "Google".metaData.alias = "@g";
         };
